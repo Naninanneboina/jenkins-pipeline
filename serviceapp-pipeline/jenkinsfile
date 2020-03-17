@@ -1,0 +1,14 @@
+pipeline{
+    stages{
+        stage('checkout the source code'){
+         steps{
+             git clone https://github.com/Naninanneboina/serviceapp-pipeline.git
+         }
+        }
+         stage('build the source code'){
+         steps{
+             maven clean install
+         }
+    }
+}
+}
